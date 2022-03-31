@@ -45,10 +45,9 @@ namespace P03
                         text = "";
                 
             }
-            if (kex)
                 textBox2.Text = text;
-            else
-                textBox2.Text = "V zadaném stringu neexistuje číslo";
+
+                
         }
     }
 }

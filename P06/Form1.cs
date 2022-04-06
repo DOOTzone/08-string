@@ -16,5 +16,34 @@ namespace P06
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = textBox1.Text;
+            char je_ = text[0];
+            int x = 1;
+            while(x<text.Length)
+            {
+                if (text[x] == ' '&&je_==' ')
+                {
+                       text = text.Remove(x, 1);
+                }
+                else {
+                    je_ = text[x];
+                    x++;
+                     }
+            }
+            textBox1.Text = text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string text = textBox1.Text;
+            while (text.Contains("  "))
+            {
+                text = text.Replace("  ", " ");
+            }
+            textBox1.Text = text;
+        }
     }
 }

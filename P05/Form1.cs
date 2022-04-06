@@ -22,6 +22,21 @@ namespace P05
             string text = textBox1.Text;
             string[] slova = text.Split(' ');
             label2.Text = Convert.ToString(slova.Length);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string text = textBox1.Text;
+            int pocet = 0;
+            text = text.Trim();
+            string[] slova = text.Split(' ');
+            for (int i = 0; i < slova.Length; i++)
+            {
+                if (slova[i] != "")
+                    pocet++;
+            }
+            label2.Text = pocet.ToString();
         }
     }
 }
